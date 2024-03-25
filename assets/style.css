@@ -129,6 +129,14 @@ li:hover {
 
 /*Filtres*/
 
+.position-button {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+
 .filter-btns{
 	border-radius: 50px;
 	background-color: white;
@@ -216,9 +224,39 @@ footer nav ul {
   right: 0;
 }
 
+/*Boutton modifier*/
+.edit {
+	position: absolute;
+	bottom: 50px;
+  right: 300px;
+}
 
+.modifier {
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+}
+
+
+/*Boutton édition*/
+
+.edit-mode {
+	width: 100%;
+	position: absolute;
+	top: 20px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	right: 0px;
+}
 
 /*modale*/
+
+
+
 
 .modal {
     display: none; /* Par défaut, la modale est masquée */
@@ -237,7 +275,7 @@ footer nav ul {
     margin: 15% auto; /* Centrez la modale verticalement et horizontalement */
     padding: 20px;
     border: 1px solid #888;
-    width: 15%; /* Largeur de la modale */
+    width: 27%; /* Largeur de la modale */
 		height: 600px;
 }
 #modal-image-container {
@@ -312,7 +350,7 @@ footer nav ul {
 
 
 .boutton-ajouter {
-	width: 150px;
+	width: 250px;
 	height: 50px;
 	background-color: #1D6154;
 	color: white;
@@ -332,4 +370,84 @@ footer nav ul {
 
   cursor: pointer;
   color: black; /* Couleur de l'icône de poubelle */
+}
+
+
+.texte-modale-2 {
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	font-size: large;
+}
+
+.dialog__content__new__photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 19px 0;
+  background-color: #e8f1f7;
+  border-radius: 3px;
+  margin: 35px 105px 0 105px;
+	width: 350px;
+}
+
+
+.dialog__content__new__category__title {
+position: relative;
+}
+
+
+.ajustement_titre {
+	position: absolute;
+}
+
+.ajustement_barre {
+	position: absolute;
+	top:80px;
+	width: 350px;
+	border-color: grey;
+	height: 25px;
+}
+
+
+.ajustement_barre_category {
+	position: absolute;
+	top: 180px;
+	width: 350px;
+	height: 25px;
+}
+
+.content__add__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boutton_fichier {
+	opacity: 0;
+}
+
+.position_valider {
+	position: absolute;
+	top: 300px;
+	right: 160px;
+}
+
+/* CSS pour aligner les images par groupe de cinq */
+.img-container {
+  display: inline-block;
+  width: 50%; /* Chaque image occupe 20% de la largeur */
+  box-sizing: border-box;
+  
+  text-align: center; /* Centrer le contenu à l'intérieur du conteneur */
+}
+
+.modal-content {
+  text-align: justify; /* Aligner les conteneurs d'images pour qu'ils soient justifiés */
+}
+
+.modal-content::after {
+  content: '';
+  display: inline-block;
+  width: 100%; /* Créer un espace invisible pour forcer le dernier groupe d'images à s'aligner correctement */
 }
