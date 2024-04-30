@@ -103,7 +103,9 @@ async function displayFilterButtons() {
     const categories = await getCategories();
     categories.forEach((category) => {
       const btn = document.createElement("button");
-      btn.textContent = category.name.toUpperCase();
+      // Mettre seulement la première lettre en majuscule et le reste en minuscules
+      const categoryName = category.name.charAt(0).toUpperCase() + category.name.slice(1).toLowerCase();
+      btn.textContent = categoryName;
       btn.id = category.id;
       btn.classList.add("filters"); // Ajout de la classe CSS "filters" au bouton
       filters.appendChild(btn);

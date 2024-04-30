@@ -2,12 +2,10 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     event.preventDefault(); // Empêcher le formulaire d'être soumis normalement
   
     // Récupérer les valeurs des champs du formulaire
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
   
-    // Utiliser les valeurs récupérées
-    console.log("Email:", email);
-    console.log("Mot de passe:", password);
+
   
     // Envoyer les données du formulaire à votre API d'authentification via une requête AJAX
     fetch('http://localhost:5678/api/users/login', {

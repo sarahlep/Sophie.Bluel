@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color:#FFFEF8; 
 }
 ol, ul {
 	list-style: none;
@@ -149,8 +150,35 @@ li:hover {
 	font-family: 'Syne';
 	font-size: 23px;
 	margin-bottom: 20px;
+	justify-content: center;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
+.filters:hover {
+	border-color: white; /* Applique une bordure blanche au survol */
+}
+
+.filters button:hover {
+	background-color: #1D6154; /* Réinitialise la couleur de fond des boutons au survol */
+	color: white;
+}
+
+
+.filters-global {
+	border-radius: 50px;
+	background-color: white;
+	color: #1D6154;
+	height: 50px;
+	font-size: 25px;
+  border-color: #1D6154;
+	display: flex;
+	margin-left: 20px;
+	font-family: 'Syne';
+	font-size: 23px;
+	margin-bottom: 20px;
+}
 
 .gallery {
 	width: 100%;
@@ -171,6 +199,8 @@ margin-top: 25px;
 }
 #contact > * {
 	text-align: center;
+	
+	
 
 }
 #contact h2{
@@ -181,6 +211,7 @@ margin-top: 25px;
 	margin-top:30px;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 #contact input {
@@ -188,6 +219,9 @@ margin-top: 25px;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	position: relative;
+
+	right: 17px;
 }
 #contact label {
 	margin: 2em 0 1em 0;
@@ -197,21 +231,27 @@ margin-top: 25px;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
+.mdp {
+	list-style-type: none; /* Pour enlever le point */
+	text-decoration: underline; /* Pour souligner le texte */
+}
+
+
 input[type="submit"]{
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
-	background-color: grey;
+	background-color: gray;
 	margin : 2em auto ;
 	width: 180px;
 	text-align: center;
 	border-radius: 60px ;
 	position: absolute;
-	top: 750px;
 	right: 260px;
 	height: 40px;
 	font-size: large;
 	border-color: grey ;
+	top: 700px;
 }
 
 
@@ -230,15 +270,15 @@ footer nav ul {
 
 /*Boutton modifier*/
 .edit {
-	position: absolute;
-	bottom: 1290px;
-  right: 300px;
+	position: relative;
+
 }
+
 
 .modifier {
 	position: absolute;
-	bottom: 20px;
-	right: 1380px;
+	bottom: 3420px;
+	right: 380px;
 }
 
 
@@ -246,6 +286,12 @@ footer nav ul {
 	position: absolute;
 	right: 1450px ;
 	bottom: 20px;
+}
+
+
+.fa-regular.fa-pen-to-square.logo-pen {
+bottom:3420px;
+right: 450px;
 }
 
 /*Boutton édition*/
@@ -321,10 +367,10 @@ right: 120px;
 	justify-content: center;
 	background-color: #fefefe;
 	margin: 15% auto;
-	padding: 20px;
+	padding: 100px;
 	border: 1px solid #888;
 	width: 17%; /* Ajustez la largeur selon vos besoins */
-	height: 800px; /* Ajustez la hauteur selon vos besoins */
+	height: 600px; /* Ajustez la hauteur selon vos besoins */
 	overflow-y: auto; /* Ajoute une barre de défilement vertical si nécessaire */
 	display: grid;
 	align-content: center;
@@ -332,6 +378,7 @@ right: 120px;
 	gap: 0px; /* Ajoute un espace entre les images */
 	align-items: center;
 	z-index: 1000; /* Z-index de la modale */
+	border-radius: 10px;
 }
 
 /* CSS pour les images */
@@ -363,10 +410,12 @@ right: 120px;
 	margin: 15% auto; /* Centrez la modale verticalement et horizontalement */
 	padding: 20px;
 	border: 1px solid #888;
-	width: 18%; /* Largeur de la modale */
-	height: 800px;
+	width: 17%; /* Largeur de la modale */
+	height: 600px;
 	z-index: 1000; /* Z-index de la modale */
-	
+	padding: 100px;
+	border-radius: 10px;
+	position: relative;
 }
 
 .modal-page.active {
@@ -626,6 +675,9 @@ width: 30%; /* La largeur maximale est celle du conteneur parent */
 	padding-top: 10px;
 	justify-content: center;
 	display: none;
+	width: 300%;
+	position: relative;
+	right: 1000px;
 }
 
 .edit-mode-banner p {
@@ -636,8 +688,12 @@ width: 30%; /* La largeur maximale est celle du conteneur parent */
 
 .mot-edition {
 	position: absolute;
-	left: 1800px;
+	left: 1600px;
 	top:10px;
+}
+
+.edit-projets {
+	position: relative;
 }
 
 .texte-gallerie {
@@ -663,3 +719,4 @@ width: 30%; /* La largeur maximale est celle du conteneur parent */
 .boutton-valider.valid {
   background-color: #2ecc71; /* Vert */
 }
+
